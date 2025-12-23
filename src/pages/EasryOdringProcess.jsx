@@ -30,7 +30,7 @@ const OrderingProcess = () => {
   ];
 
   return (
-    <section className="bg-white py-8 px-4 sm:px-6 md:px-[64px] font-sans text-black">
+    <section className="bg-white  py-8 px-4 sm:px-6 md:px-[64px] font-sans text-black">
       <div className="max-w-10xl mx-auto">
 
         {/* Header Section */}
@@ -49,33 +49,33 @@ const OrderingProcess = () => {
           </div>
 
           <p className="text-gray-400 text-[10px] sm:text-xs  md:max-w-[240px] 
-                        mt-6 md:mt-10 font-semibold uppercase leading-tight tracking-tight">
+                          mt-6 md:mt-10 font-semibold uppercase leading-tight tracking-tight">
             From Selection To Delivery — Simple, Fast, And Secure.
           </p>
         </div>
 
         {/* Steps Grid */}
         <div className="
-          grid 
-          grid-cols-1 
-          md:grid-cols-2 
-          gap-y-20 sm:gap-y-28 md:gap-y-32 
-          gap-x-12 md:gap-x-20
-          ml-0 sm:ml-0 md:ml-48
-        ">
+            grid 
+            grid-cols-1 
+            md:grid-cols-2 
+            gap-y-20 sm:gap-y-28 md:gap-y-32 
+            gap-x-12 md:gap-x-20
+            ml-0 sm:ml-0 lg:ml-16 
+          ">
           {steps.map((step, index) => (
             <div
               key={step.id}
               className={`
-                flex items-start gap-6 sm:gap-10
-                ${index < 2 ? "md:ml-24" : "md:-ml-24"}
-              `}
+                  flex items-start gap-6 sm:gap-10
+                  ${index < 2 ? "lg:ml-24" : "lg:-ml-10"}
+                `}
             >
 
               {/* Step Number */}
               <div className="relative shrink-0 pt-2">
                 <span className="text-5xl sm:text-6xl md:text-7xl 
-                                 font-semibold tracking-tighter leading-none ">
+                                  font-semibold tracking-tighter leading-none ">
                   {step.id}
                 </span>
                 <div className="absolute -bottom-1 left-0 w-full h-[4px] bg-black"></div>
@@ -86,15 +86,15 @@ const OrderingProcess = () => {
 
                 {/* Back Gray Box */}
                 <div className="absolute top-2 rotate-6 left-3 sm:left-4 
-                                w-full h-full bg-gray-200 border border-gray-300">
+                                  w-full h-full bg-gray-200 border border-gray-300">
                 </div>
 
                 {/* Main White Card */}
                 <div className="relative -rotate-3 ml-4 sm:ml-5 
-                                bg-white border border-gray-200 
-                                p-6 sm:p-7 md:p-8 shadow-sm">
+                                  bg-white border border-gray-200 
+                                  p-6 sm:p-7 md:p-8 shadow-sm">
                   <div className="bg-black w-9 h-9 sm:w-10 sm:h-10 
-                                  flex items-center justify-center mb-5 sm:mb-6">
+                                    flex items-center justify-center mb-5 sm:mb-6">
                     {step.icon}
                   </div>
 
@@ -103,7 +103,7 @@ const OrderingProcess = () => {
                   </h4>
 
                   <p className="text-gray-500 text-[11px] sm:text-[12px] 
-                                font-medium leading-relaxed">
+                                  font-medium leading-relaxed">
                     {step.description}
                   </p>
                 </div>

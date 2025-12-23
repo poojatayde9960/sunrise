@@ -10,7 +10,7 @@ const OurBestSeller = () => {
     ];
 
     return (
-        <div className="bg-white min-h-screen font-sans text-black overflow-x-hidden">
+        <div className="bg-white font-sans text-black overflow-x-hidden">
 
             {/* SECTION 1: OUR BEST SELLERS */}
             <section className="py-8 sm:py-12 md:py-14 bg-[#D9D9D933] px-4 sm:px-6 md:px-6 max-w-10xl mx-auto">

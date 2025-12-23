@@ -13,39 +13,36 @@ const products = [
 const Geyser = () => {
     const navigate = useNavigate();
     return (
-        <section className="w-full bg-white py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <section className="w-full bg-white py-10 md:py-20">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-12">
 
-
-
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-10">
-                    <p className="text-black font-semibold text-xl md:text-lg text-center mr-[30%] md:text-right md:flex-1">
+                <div className="flex flex-col md:flex-row items-center justify-center md:justify-end gap-6 mb-10">
+                    <p className="text-black font-semibold  text-xl md:text-xl -mb-5  text-center md:mr-[40%]">
                         Find the accessories you’re looking for.
                     </p>
-
                 </div>
 
+                <div className="flex flex-col md:flex-row justify-between items-center md:ml-24 mb-14 gap-4">
 
+                    <div className="w-full md:ml-[26%]  md:w-[35%] relative">
+                        {/* Search Icon – LEFT */}
+                        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
+                            <Icon icon="iconoir:search" className="text-xl" />
+                        </span>
 
-                <div className="flex flex-col md:flex-row md:justify-between items-center mb-14 px-4 md:px-0">
-                    <div className="w-full md:w-[45%] md:ml-[29%] mb-4 md:mb-0 relative">
                         <input
                             type="text"
                             placeholder="Search By Product Name"
-                            className="pl-4 pr-10 py-4 border w-full text-sm focus:outline-none"
+                            className="pl-12 pr-4 py-4 border w-full text-sm focus:outline-none rounded-md"
                         />
-                        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
-                            🔍
-                        </span>
                     </div>
 
                     <div className="w-full md:w-auto flex justify-center md:justify-end">
-                        <button className="flex items-center justify-center md:justify-start gap-2 px-4 py-3 bg-[#D9D9D933] text-sm w-full md:w-auto">
+                        <button className="flex items-center justify-center gap-2 px-6 py-3 bg-[#D9D9D933] text-sm w-full md:w-auto rounded-md whitespace-nowrap">
                             All Products
                             <Icon icon="basil:filter-outline" className="text-lg" />
                         </button>
                     </div>
-
                 </div>
 
                 {/* TITLE */}

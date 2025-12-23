@@ -6,11 +6,11 @@ const ProductCard = ({ name, price, productImg }) => {
     <div className="flex flex-col items-center w-full group">
       {/* 3-Layer Image Container */}
       <div className="relative w-full aspect-[4/5] flex items-end justify-center overflow-hidden bg-[#f8f8f8]">
-        
+
         {/* Layer 1: Background (Wave/Gradient Effect) */}
         <div className="absolute inset-0 z-0 opacity-40">
-           {/* Agar aapke paas BG image hai to <img> tag use karein, nahi toh ye simple gradient hai */}
-            <img src="./product.png" className="w-full h-full" alt="stand" />
+          {/* Agar aapke paas BG image hai to <img> tag use karein, nahi toh ye simple gradient hai */}
+          <img src="./product.png" className="w-full h-full" alt="stand" />
         </div>
 
         {/* Layer 3: Main Product Image */}
@@ -63,9 +63,9 @@ export default function ShopPage() {
   ];
 
   return (
-    <div className="bg-white min-h-screen font-sans py-8 px-4 sm:px-6 md:px-[64px]">
+    <div className="bg-white  font-sans py-8 px-4 sm:px-6 md:px-[64px]">
       <div className="max-w-10xl mx-auto">
-        
+
         {/* Main Heading */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-semibold text-gray-900 tracking-tight">
@@ -88,11 +88,11 @@ export default function ShopPage() {
         {/* Footer Swipe Text */}
         <div className="mt-16 text-center">
           <p className="text-gray-800 font-bold text-sm flex items-center justify-center gap-2">
-            Swipe To See other products 
+            Swipe To See other products
             <span className="tracking-tighter font-black">{" >>>"}</span>
           </p>
         </div>
-        
+
       </div>
     </div>
   );
