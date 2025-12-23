@@ -46,7 +46,7 @@ export default function ShopPage() {
       id: 1,
       name: "Lakshmisun Instant Geyser",
       price: 25000,
-      productImg: "./1 (3).png", // Yaha apni image ka link dalein
+      productImg: "./1 (3).png",
     },
     {
       id: 2,

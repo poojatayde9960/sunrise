@@ -6,9 +6,9 @@ import LoginPage from "../pages/LoginPage";
 
 const Navbar = () => {
     const [loginOpen, setLoginOpen] = useState(false);
+    const [open, setOpen] = useState(false); // mobile menu
+    const [contactOpen, setContactOpen] = useState(false);
 
-    const [open, setOpen] = useState(false);
-    const [contactOpen, setContactOpen] = useState(false); // 
     return (
         <nav className="absolute top-0 left-0 w-full z-50 bg-transparent px-4 py-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -20,10 +20,10 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                {/* Menu - center */}
+                {/* Desktop Menu */}
                 <ul className="hidden md:flex items-center gap-12 font-medium text-black">
                     <li>
-                        <Link to="/producs" className=" transition">
+                        <Link to="/producs" className="transition">
                             Product
                         </Link>
                     </li>
@@ -33,7 +33,6 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        {/* Open Contact Modal */}
                         <button
                             onClick={() => setContactOpen(true)}
                             className="text-black"
@@ -43,9 +42,8 @@ const Navbar = () => {
                     </li>
                 </ul>
 
-                {/* Right buttons */}
-                {/* Right buttons */}
-                <div className="flex items-center gap-4">
+                {/* Right Buttons */}
+                <div className="hidden md:flex items-center gap-4">
                     <Link to="/cart">
                         <Icon icon="mynaui:cart" className="text-2xl text-black cursor-pointer" />
                     </Link>
@@ -59,48 +57,72 @@ const Navbar = () => {
                     </button>
                 </div>
 
+                {/* Mobile Menu Button */}
+                <div className="md:hidden flex items-center gap-4">
+                    <button onClick={() => setOpen(!open)}>
+                        <Icon
+                            icon={open ? "mdi:close" : "mdi:menu"}
+                            className="text-3xl text-black"
+                        />
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}
             {open && (
-                <div className="md:hidden mt-4 bg-white/90 backdrop-blur rounded-lg p-4 space-y-2">
-                    <Link to="/producs" className="block px-2 py-2 hover:bg-gray-100 rounded">
+                <div className="md:hidden mt-4 bg-white/90 backdrop-blur rounded-lg p-4 space-y-2 shadow-lg">
+                    <Link
+                        to="/producs"
+                        onClick={() => setOpen(false)}
+                        className="block px-2 py-2 hover:bg-gray-100 rounded"
+                    >
                         Product
                     </Link>
-                    <Link to="/about" className="block px-2 py-2 hover:bg-gray-100 rounded">
+                    <Link
+                        to="/about"
+                        onClick={() => setOpen(false)}
+                        className="block px-2 py-2 hover:bg-gray-100 rounded"
+                    >
                         About
                     </Link>
                     <button
-                        onClick={() => setContactOpen(true)}
-                        className="block px-2 py-2 hover:bg-gray-100 rounded"
+                        onClick={() => {
+                            setContactOpen(true);
+                            setOpen(false); // close menu
+                        }}
+                        className="block px-2 py-2 hover:bg-gray-100 rounded w-full text-left"
                     >
                         Contact
                     </button>
-                    <Link
-                        to="/login"
-                        className="flex items-center justify-center gap-2  text-white py-2 rounded-md"
+                    <button
+                        onClick={() => {
+                            setLoginOpen(true);
+                            setOpen(false); // close menu
+                        }}
+                        className="flex items-center justify-center gap-2 w-full bg-black text-white py-2 rounded-md"
                     >
                         <Icon icon="iconamoon:profile-light" className="text-xl text-white" />
                         Login
-                    </Link>
+                    </button>
                 </div>
             )}
+
 
             {/* Contact Modal */}
             {contactOpen && (
                 <div
-                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 "
-                    onClick={() => setContactOpen(false)} // overlay pe click → close modal
+                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    onClick={() => setContactOpen(false)}
                 >
                     <div
-                        className="bg-white  relative w-full max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl mx-auto shadow-lg overflow-y-auto max-h-[90vh]"
-                        onClick={(e) => e.stopPropagation()} // modal ke andar click → close na ho
+                        className="bg-white relative w-full max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl mx-auto shadow-lg overflow-y-auto max-h-[90vh] rounded-2xl"
+                        onClick={(e) => e.stopPropagation()}
                     >
-                        {/* Contact Component */}
                         <ContactUs />
                     </div>
                 </div>
             )}
+
             {/* Login Modal */}
             {loginOpen && (
                 <div
@@ -115,12 +137,8 @@ const Navbar = () => {
                     </div>
                 </div>
             )}
-
         </nav>
     );
 };
 
 export default Navbar;
-
-
-

@@ -1,24 +1,23 @@
 import React from "react";
-import contact from "../../public/contact.png"
+import contact from "../../public/contact.png";
+
 const LoginPage = () => {
     return (
-        <div className="w-full max-w-6xl bg-white rounded-2xl shadow-lg p-10">
-
-            <div className="grid grid-cols-1  mt-9 mb-9 md:grid-cols-2 gap-10 items-center">
+        <div className="w-full max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-6 sm:p-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
                 {/* LEFT IMAGE */}
-                <div className=" -ml-10 overflow-hidden">
+                <div className="-ml-0 md:-ml-10 overflow-hidden">
                     <img
                         src={contact}
                         alt="Winter Comfort"
-                        className="w-full h-[420px] object-cover"
+                        className="w-full h-64 sm:h-96 md:h-[420px] object-cover "
                     />
                 </div>
 
                 {/* RIGHT LOGIN CARD */}
-                <div className="border border-gray-200 rounded-lg p-8 max-w-md mx-auto w-full">
-
-                    <h2 className="text-xl font-semibold text-center mb-6">
+                <div className="border border-gray-200 rounded-lg p-6 sm:p-8 w-full">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6">
                         Sign in to your account
                     </h2>
 
@@ -38,7 +37,7 @@ const LoginPage = () => {
                         <div className="flex justify-between items-center mb-1">
                             <label className="text-sm text-gray-600">OTP</label>
                             <button className="text-xs text-green-500 hover:underline">
-                                Didn’t Received ? Resend
+                                Didn’t Received? Resend
                             </button>
                         </div>
                         <input
@@ -51,11 +50,9 @@ const LoginPage = () => {
                     <button className="w-full bg-black text-white py-3 rounded-md flex items-center justify-center gap-2 hover:bg-gray-800 transition">
                         LOGIN <span className="text-lg">→</span>
                     </button>
-
                 </div>
             </div>
         </div>
-
     );
 };
 

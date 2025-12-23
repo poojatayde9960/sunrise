@@ -1,34 +1,38 @@
 import React from "react";
-import img3 from "../../public/1 (3).png"
-import img1 from "../../public/1 (1).png"
-import img from "../../public/5.png"
-import img5 from "../../public/cart.png"
-import bg from "../../public/bg.png"
-// import bg1 from "../../public/bg1.png"
+import img3 from "../../public/1 (3).png";
+import img1 from "../../public/1 (1).png";
+import img4 from "../../public/1 (4).png";
+import img from "../../public/5.png";
+import img5 from "../../public/cart.png";
+import bg from "../../public/bg.png";
 import { Icon } from "@iconify/react";
+
 const Details = () => {
+    const otherProducts = [
+        { id: 1, img: img3 },
+        { id: 2, img: img1 },
+        { id: 3, img: img4 },
+    ];
+
     return (
-        <div
-            className=""
-        >
-            <div className="  bg-white/80  rounded-lg">
-                {/* PRODUCT MAIN */}
+        <div>
+            <div className="bg-white/80 rounded-lg">
+
+                {/* ================= PRODUCT MAIN ================= */}
                 <div
-                    className="flex flex-col  lg:flex-row gap-12 mb-16 h-[120%] p-[8%] rounded-lg"
+                    className="flex flex-col lg:flex-row gap-12 mb-16 p-[8%] rounded-lg"
                     style={{ backgroundImage: `url(${bg})` }}
                 >
                     {/* Product Images */}
-                    <div className="flex items-center mt-10 lg:items-start gap-4">
+                    <div className="flex items-center lg:items-start gap-4 mt-10">
 
-                        <div className="relative w-64 lg:w-80">
-                            {/* Background image behind product */}
+                        <div className="relative w-56 sm:w-64 lg:w-80">
                             <img
                                 src={img}
                                 alt="Background"
-                                className="absolute top-[60%] h-[80%] w-[190%] "
+                                className="absolute top-[60%] h-[80%] w-[180%]"
                             />
 
-                            {/* Main image */}
                             <img
                                 src={img3}
                                 alt="Smart Water Geyser"
@@ -38,215 +42,138 @@ const Details = () => {
 
                         {/* Thumbnails */}
                         <div className="flex flex-col items-center gap-2 mt-10">
-
-                            <button
-                                className="w-9 h-9 border border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition"
-                            >
+                            <button className="w-9 h-9 border border-black rounded-full flex items-center justify-center">
                                 <Icon icon="weui:arrow-outlined" className="text-lg -rotate-90" />
                             </button>
 
-                            {/* Thumbnails */}
                             {[1, 2, 3].map((item) => (
                                 <div
                                     key={item}
-                                    className="w-20 h-20 bg-[#D9D9D9] flex items-center justify-center cursor-pointer"
+                                    className="w-20 h-20 bg-[#D9D9D9] flex items-center justify-center"
                                 >
                                     <img
                                         src={img3}
-                                        alt={`Geyser ${item}`}
+                                        alt=""
                                         className="w-12 h-16 object-contain"
                                     />
                                 </div>
                             ))}
 
-                            {/* BOTTOM ARROW (last image chya khali) */}
-                            <button
-                                className="w-9 h-9 border border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition"
-                            >
+                            <button className="w-9 h-9 border border-black rounded-full flex items-center justify-center">
                                 <Icon icon="weui:arrow-outlined" className="text-lg rotate-90" />
                             </button>
-
                         </div>
-
-
                     </div>
 
                     {/* Product Info */}
-                    <div className="flex-1 flex mt-10 flex-col gap-4">
+                    <div className="flex-1 mt-10 flex flex-col gap-4">
                         <h1 className="text-3xl lg:text-4xl font-semibold">
                             SMART WATER GEYSER
                         </h1>
 
-                        <p className="text-[#1A1919] font-semibold font-rethink text-sm">
+                        <p className="font-semibold text-sm">
                             Best For: Bedroom, living rooms, offices
                         </p>
 
-                        <p className="text-2xl font-rethink font-medium mt-2">₹15,000</p>
-                        <div className="inline-flex items-center border border-gray-500 h-8 w-24 ">
-                            <button className="w-10 h-full flex items-center justify-center text-lg">
-                                −
-                            </button>
+                        <p className="text-2xl font-medium">₹15,000</p>
 
-                            <span className="w-10 h-full flex items-center justify-center text-base">
-                                0
-                            </span>
-
-                            <button className="w-10 h-full flex items-center justify-center text-lg">
-                                +
-                            </button>
+                        <div className="inline-flex items-center border border-gray-500 h-8 w-24">
+                            <button className="w-8">−</button>
+                            <span className="w-8 text-center">0</span>
+                            <button className="w-8">+</button>
                         </div>
 
-
-
-                        <div className="mt-2">
+                        <div>
                             <h3 className="font-semibold">Key Highlights:</h3>
-                            <ul className="list-disc list-inside text-gray-600 mt-2 space-y-0">
-                                <li className="text-xs">Fast & uniform heating</li>
-                                <li className="text-xs">Auto cut-off for added safety</li>
-                                <li className="text-xs">100% shockproof body</li>
-                                <li className="text-xs">Dual heat settings for energy control</li>
-                                <li className="text-xs">Lightweight and portable design</li>
-                                <li className="text-xs">1 Year Manufacturer warranty</li>
+                            <ul className="list-disc list-inside text-sm space-y-1">
+                                <li>Fast & uniform heating</li>
+                                <li>Auto cut-off for safety</li>
+                                <li>100% shockproof body</li>
+                                <li>Dual heat settings</li>
+                                <li>1 Year warranty</li>
                             </ul>
                         </div>
 
                         <div className="flex gap-4 mt-5">
-                            <button className=" h-10 w-36 bg-black text-white font-semibold">
+                            <button className="h-10 w-36 bg-black text-white">
                                 ADD TO CART
                             </button>
-                            <button className="h-10 w-36 border border-black font-semibold">
+                            <button className="h-10 w-36 border border-black">
                                 SHOP NOW
                             </button>
                         </div>
                     </div>
                 </div>
 
-                {/* Description & How to Use */}
-                <div className="flex flex-col lg:flex-row gap-8 mb-16 px-4 lg:px-12">
-                    {/* DESCRIPTION */}
-                    <div className="flex-1 border border-black p-6 bg-white/90">
-                        <h3 className="font-semibold text-lg mb-2">DESCRIPTION</h3>
-                        <p className="text-[#000000] text-sm">
+                {/* ================= DESCRIPTION ================= */}
+                <div className="flex flex-col lg:flex-row gap-8 mb-16 px-4 lg:px-[11%]">
+                    <div className="flex-1 border border-black p-6">
+                        <h3 className="font-semibold mb-2">DESCRIPTION</h3>
+                        <p className="text-sm">
                             Stay warm and comfortable during winter with Lakshmisun Room Heaters, designed to deliver fast and efficient heating while ensuring complete safety. Built with shockproof protection and auto cut-off technology, these heaters are ideal for daily home use.
                         </p>
                     </div>
 
-                    {/* HOW TO USE */}
-                    <div className="flex-1 border border-black p-6 bg-white/90">
-                        <h3 className="font-semibold text-lg mb-2">HOW TO USE ?</h3>
-                        <p className="text-[#000000] text-sm">
+                    <div className="flex-1 border border-black p-6">
+                        <h3 className="font-semibold mb-2">HOW TO USE?</h3>
+                        <p className="text-sm">
                             Place the room heater on a flat and stable surface in the room. Plug it into a suitable power socket and select the desired heat setting. Allow the heater to warm the room gradually. Always ensure proper ventilation and switch off the heater when not in use. Do not cover the heater during operation to maintain safety.
                         </p>
                     </div>
                 </div>
 
-
-                {/* Other Products */}
-                <div className="mt-12">
-                    {/* Heading */}
-                    <div className="flex items-center gap-2 mb-6 px-12">
-                        <button
-                            className="w-6 h-6 border border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition"
-                        >
-                            <Icon icon="weui:arrow-outlined" className="text-sm rotate-180" />
+                {/* ================= OTHER PRODUCTS ================= */}
+                <div className="mt-12 px-4 sm:px-10 lg:px-[8%]">
+                    <div className="flex items-center gap-2 mb-8">
+                        <button className="w-6 h-6 border border-black rounded-full flex items-center justify-center">
+                            <Icon icon="weui:arrow-outlined" className="rotate-180 text-sm" />
                         </button>
                         <h3 className="font-semibold text-sm">OTHER PRODUCTS</h3>
                     </div>
 
-                    {/* Cards with background */}
-                    <div className="relative px-12">
-                        {/* Background image behind cards */}
-                        <div
-                            className="absolute rounded-lg"
-
-                        ></div>
-
-                        {/* Cards container */}
-                        <div className="relative grid grid-cols-1  mb-40 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                            {/* Card 1 */}
-                            <div className="relative w-72 h-52">
-                                {/* Background image */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-24">
+                        {otherProducts.map((item) => (
+                            <div
+                                key={item.id}
+                                className="relative w-full h-[50%] max-w-xs mx-auto"
+                            >
                                 <img
                                     src={img5}
-                                    alt="background"
-                                    className="absolute inset-0 w-full h-72 object-cover " // increased height to 72
+                                    alt="bg"
+                                    className="absolute inset-0 w-full h-56 sm:h-[150%]  object-cover"
                                 />
-                                <div className="relative w-64 mt-[19%] ml-[25%] lg:w-[50%]">
 
+                                <div
+                                    className={`relative flex justify-center pt-20
+    ${item.id === 3
+                                            ? "sm:translate-y-4 md:-translate-y-14"
+                                            : "sm:-translate-y-10"
+                                        }
+  `}
+                                >
                                     <img
-                                        src={img3}
-                                        alt="Smart Water Geyser"
-                                        className="relative w-full object-contain  z-10"
+                                        src={item.img}
+                                        alt=""
+                                        className={`object-contain z-10
+      ${item.id === 3
+                                                ? "w-56 sm:w-64 md:w-72 lg:w-80"
+                                                : "w-40 sm:w-48 md:w-52"
+                                            }
+    `}
                                     />
                                 </div>
-                                <div className="mt-9">
-                                    <h4 className="font-semibold text-lg text-center font-rethink">Lakshmisun Instant Geyser</h4>
-                                    <div className="ml-[38%]">
-                                        <p className="font-semibold mt-1 font-rethink">₹25,000</p>
-                                    </div>
-                                </div>
-                                {/* Foreground card content */}
 
+
+                                <div className="relative mt-6 sm:-translate-y-6  text-center pb-6">
+                                    <h4 className="font-semibold ">
+                                        Lakshmisun Instant Geyser
+                                    </h4>
+                                    <p className="font-semibold mt-1">₹25,000</p>
+                                </div>
                             </div>
-
-                            {/* Card 2 */}
-                            <div className="relative w-72 h-52">
-                                {/* Background image */}
-                                <img
-                                    src={img5}
-                                    alt="background"
-                                    className="absolute inset-0  w-full h-72 object-cover " // increased height to 72
-                                />
-                                <div className="relative w-64 mt-[12%] ml-[25%]   lg:w-[60%]">
-
-                                    <img
-                                        src={img1}
-                                        alt="Smart Water Geyser"
-                                        className="relative w-full object-contain  z-10"
-                                    />
-                                </div>
-                                <div className="mt-2">
-                                    <h4 className="font-semibold text-lg text-center font-rethink">Lakshmisun Instant Geyser</h4>
-                                    <div className="ml-[38%]">
-                                        <p className="font-semibold mt-1 font-rethink">₹25,000</p>
-                                    </div>
-                                </div>
-                                {/* Foreground card content */}
-
-                            </div>
-
-
-                            {/* Card 3 */}
-                            <div className="relative w-72 h-52">
-                                {/* Background image */}
-                                <img
-                                    src={img5}
-                                    alt="background"
-                                    className="absolute inset-0 w-full h-72 object-cover " // increased height to 72
-                                />
-                                <div className="relative w-64 mt-[19%] ml-[25%] lg:w-[50%]">
-
-                                    <img
-                                        src={img3}
-                                        alt="Smart Water Geyser"
-                                        className="relative w-full object-contain  z-10"
-                                    />
-                                </div>
-                                <div className="mt-9">
-                                    <h4 className="font-semibold text-lg text-center font-rethink">Lakshmisun Instant Geyser</h4>
-                                    <div className="ml-[38%]">
-                                        <p className="font-semibold mt-1 font-rethink">₹25,000</p>
-                                    </div>
-                                </div>
-                                {/* Foreground card content */}
-
-                            </div>
-
-                        </div>
-
+                        ))}
                     </div>
                 </div>
-
 
             </div>
         </div>
