@@ -26,8 +26,8 @@ const Geyser = () => {
 
                     <div className="w-full md:ml-[26%]  md:w-[35%] relative">
                         {/* Search Icon – LEFT */}
-                        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
-                            <Icon icon="iconoir:search" className="text-xl" />
+                        <span className="absolute left-4 top-1/2  -translate-y-1/2 text-gray-400">
+                            <Icon icon="iconoir:search" className="text-xl mb-2" />
                         </span>
 
                         <input
