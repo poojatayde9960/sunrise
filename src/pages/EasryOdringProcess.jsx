@@ -30,7 +30,7 @@ const OrderingProcess = () => {
   ];
 
   return (
-    <section className="bg-white  py-8 px-4 sm:px-6 md:px-[64px] font-sans text-black">
+    <section className="bg-white  py-8 px-6 sm:px-6 md:px-[64px] font-sans text-black">
       <div className="max-w-10xl mx-auto">
 
         {/* Header Section */}
@@ -68,7 +68,7 @@ const OrderingProcess = () => {
               key={step.id}
               className={`
                   flex items-start gap-6 sm:gap-10
-                  ${index < 2 ? "lg:ml-24" : "lg:-ml-10"}
+                  ${index < 2 ? "lg:ml-12" : "lg:-ml-10"}
                 `}
             >
 

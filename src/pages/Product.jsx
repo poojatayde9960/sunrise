@@ -23,8 +23,8 @@ const Product = () => {
                 <div className="px-6 lg:px-12 py-12 lg:py-24  grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
                     {/* LEFT CONTENT */}
-                    <div className="flex flex-col justify-center max-w-3xl  text-center  lg:text-left lg:ml-20 order-2 lg:order-1">
-                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-black leading-tight">
+                    <div className="flex flex-col justify-center max-w-3xl  text-center  lg:mt-20 lg:text-left lg:ml-20 order-2 lg:order-1">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-rethink font-semibold text-black leading-tight">
                             <span className="whitespace-nowrap">EVERYDAY COMFORT</span> <br />
                             <span className="whitespace-nowrap">FOR EVERY SEASON</span>
                         </h1>

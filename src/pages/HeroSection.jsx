@@ -3,6 +3,7 @@ import img4 from "../../public/img4.jpg";
 import img5 from "../../public/img5.jpg";
 import group from "../../public/group.png";
 import WhyChooseSunrise from "./WhyChooseSunrise";
+import WinterCTA from "./WinterCTA";
 
 const HeroSection = () => {
     return (
@@ -62,6 +63,7 @@ const HeroSection = () => {
             </section>
 
             <WhyChooseSunrise />
+            <WinterCTA />
         </>
     );
 };

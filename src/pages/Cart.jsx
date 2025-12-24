@@ -5,7 +5,7 @@ import bg from "../../public/bg.png";
 
 const Cart = () => {
     return (
-        <section className="w-full bg-white pb-20">
+        <section className="w-full bg-white pb-10">
 
             <div
                 className="relative py-16 sm:py-20 md:py-24 mb-8 md:mb-10 bg-center bg-cover"
@@ -33,11 +33,11 @@ const Cart = () => {
 
                 <div className="flex items-center gap-4 mb-6
                 md:justify-center lg:justify-start">
-                    <button className="w-8 h-8 border border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition">
-                        <Icon icon="weui:arrow-outlined" />
+                    <button className="w-6 h-6 border border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition">
+                        <Icon icon="weui:arrow-outlined" className="size-5" />
                     </button>
-                    <p className="text-sm text-gray-500">
-                        Home / <span className="text-black">Shopping Cart</span>
+                    <p className="text-sm text-[#1A1919] font-semibold">
+                        Home / <span className="text-[#1A1919]">Shopping Cart</span>
                     </p>
                 </div>
 
@@ -49,9 +49,9 @@ const Cart = () => {
                     {/* PROGRESS BAR */}
                     <div className="flex flex-col items-center mb-8 sm:mb-10">
                         <div className="w-full max-w-md md:max-w-xl  lg:-mt-9 lg:max-w-md
-                    h-2 bg-gray-300 rounded-full overflow-hidden
+                    h-1.5 bg-gray-300 rounded-full overflow-hidden
                     mb-3 sm:mb-4 sm:-mt-10 md:mt-0">
-                            <div className="h-full w-[85%] bg-green-500 rounded-full" />
+                            <div className="h-full w-[85%] bg-[#00DF3C] rounded-full" />
                         </div>
 
                         <p className="text-center flex flex-wrap items-center justify-center gap-2
@@ -100,11 +100,11 @@ const Cart = () => {
 
 
                 {/* CART ITEMS */}
-                <div className="space-y-6 mb-12">
+                <div className="space-y-6 mb-6">
                     {[1, 2].map((item) => (
                         <div
                             key={item}
-                            className="border p-4 flex flex-col md:flex-row justify-between gap-4"
+                            className="border border-[#1A191952] p-4 flex flex-col md:flex-row justify-between gap-4"
                         >
                             <div className="flex items-center gap-4">
                                 <Icon icon="mdi:trash-can-outline" className="text-red-500 text-xl" />
@@ -135,7 +135,7 @@ const Cart = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="border p-4 h-[95%]">
+                    <div className="border border-[#1A191952] p-4 h-[95%]">
                         <div className="flex justify-between mb-3">
                             <h3 className="font-semibold">Select Address</h3>
                             <button className="text-[#00DF3C] text-sm">+ Add Address</button>
@@ -160,7 +160,7 @@ const Cart = () => {
 
                     {/* PAYMENT */}
                     <div>
-                        <div className="border p-5 mb-6">
+                        <div className="border border-[#1A191952] p-5 mb-6">
                             <h3 className="font-semibold mb-3">Payment Method</h3>
                             <hr />
                             <label className="flex items-center gap-3 mt-4">
@@ -173,7 +173,7 @@ const Cart = () => {
                             </label>
                         </div>
 
-                        <div className="border p-4">
+                        <div className=" border-[#1A191952] border p-4">
                             <div className="relative">
                                 <input
                                     type="text"
@@ -188,9 +188,9 @@ const Cart = () => {
                     </div>
 
                     {/* BILL SUMMARY */}
-                    <div className="border p-4 h-[95%]">
+                    <div className="border border-[#1A191952] p-4 h-[95%]">
                         <h3 className="font-semibold mb-4">Bill Summary</h3>
-                        <hr />
+                        <hr className="text-[#D9D9D9]" />
                         <div className="mt-6 space-y-3 text-sm">
                             <div className="flex justify-between">
                                 <span>Subtotal</span>
@@ -218,11 +218,11 @@ const Cart = () => {
 
                     {/* BUTTONS */}
                     <div className="flex flex-col sm:flex-row justify-between gap-4 -mt-3">
-                        <button className="border px-4 py-2 text-sm w-full sm:w-auto lg:whitespace-nowrap">
+                        <button className="border  font-rethink border-[#666666] px-4 py-2 text-sm w-full sm:w- text-[#666666] lg:whitespace-nowrap">
                             Continue Shopping
                         </button>
 
-                        <button className="bg-green-500 text-white p-2 text-sm w-full sm:w-auto lg:whitespace-nowrap">
+                        <button className="bg-[#00DF3C]  font-rethink text-white p-2 text-sm w-full sm:w- lg:whitespace-nowrap">
                             Proceed To Checkout
                         </button>
                     </div>

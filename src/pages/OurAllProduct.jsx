@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Individual Product Card Component
 const ProductCard = ({ name, price, productImg }) => {
@@ -31,9 +32,11 @@ const ProductCard = ({ name, price, productImg }) => {
         </p>
 
         {/* Add to Cart Button */}
-        <button className="mt-4 w-full md:w-auto px-12 py-2.5 border border-gray-400 text-gray-700 font-bold text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-300">
-          + Add to Cart
-        </button>
+        <Link to="/details">
+          <button className="mt-4 w-full  px-12 py-3 border border-gray-400 text-gray-700 font-bold text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-300">
+            + Add to Cart
+          </button>
+        </Link>
       </div>
     </div>
   );
@@ -46,7 +49,7 @@ export default function ShopPage() {
       id: 1,
       name: "Lakshmisun Instant Geyser",
       price: 25000,
-      productImg: "./1 (3).png",
+      productImg: "./1 (3).png", // Yaha apni image ka link dalein
     },
     {
       id: 2,

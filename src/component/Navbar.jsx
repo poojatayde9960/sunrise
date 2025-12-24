@@ -70,44 +70,59 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {open && (
-                <div className="md:hidden mt-4 bg-white/90 backdrop-blur rounded-lg p-4 space-y-2 shadow-lg">
-                    <Link
-                        to="/producs"
-                        onClick={() => setOpen(false)}
-                        className="block px-2 py-2 hover:bg-gray-100 rounded"
+                <div
+                    className="fixed inset-0 z-40"
+                    onClick={() => setOpen(false)} // outside click closes menu
+                >
+                    <div
+                        className="absolute top-20 right-4 left-4 
+            bg-white/90 backdrop-blur rounded-lg p-4 space-y-2 shadow-lg
+            md:hidden"
+                        onClick={(e) => e.stopPropagation()} // inside click stays open
                     >
-                        Product
-                    </Link>
-                    <Link
-                        to="/about"
-                        onClick={() => setOpen(false)}
-                        className="block px-2 py-2 hover:bg-gray-100 rounded"
-                    >
-                        About
-                    </Link>
-                    <button
-                        onClick={() => {
-                            setContactOpen(true);
-                            setOpen(false); // close menu
-                        }}
-                        className="block px-2 py-2 hover:bg-gray-100 rounded w-full text-left"
-                    >
-                        Contact
-                    </button>
-                    <button
-                        onClick={() => {
-                            setLoginOpen(true);
-                            setOpen(false); // close menu
-                        }}
-                        className="flex items-center justify-center gap-2 w-full bg-black text-white py-2 rounded-md"
-                    >
-                        <Icon icon="iconamoon:profile-light" className="text-xl text-white" />
-                        Login
-                    </button>
+                        <Link
+                            to="/producs"
+                            onClick={() => setOpen(false)}
+                            className="block px-2 py-2 hover:bg-gray-100 rounded"
+                        >
+                            Product
+                        </Link>
+
+                        <Link
+                            to="/about"
+                            onClick={() => setOpen(false)}
+                            className="block px-2 py-2 hover:bg-gray-100 rounded"
+                        >
+                            About
+                        </Link>
+
+                        <button
+                            onClick={() => {
+                                setContactOpen(true);
+                                setOpen(false);
+                            }}
+                            className="block px-2 py-2 hover:bg-gray-100 rounded-3xl w-full text-left"
+                        >
+                            Contact
+                        </button>
+
+                        <button
+                            onClick={() => {
+                                setLoginOpen(true);
+                                setOpen(false);
+                            }}
+                            className="flex items-center justify-center gap-2 w-full bg-black text-white py-2 rounded"
+                        >
+                            <Icon icon="iconamoon:profile-light" className="text-xl text-white" />
+                            Login
+                        </button>
+                    </div>
                 </div>
             )}
 
 
+
+            {/* Contact Modal */}
             {/* Contact Modal */}
             {contactOpen && (
                 <div
@@ -115,13 +130,17 @@ const Navbar = () => {
                     onClick={() => setContactOpen(false)}
                 >
                     <div
-                        className="bg-white relative w-full max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl mx-auto shadow-lg overflow-y-auto max-h-[90vh] rounded-2xl"
+                        className="bg-white relative w-full 
+            max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl 
+            mx-auto shadow-lg overflow-y-auto 
+            rounded-3xl max-h-[90vh]"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <ContactUs />
                     </div>
                 </div>
             )}
+
 
             {/* Login Modal */}
             {loginOpen && (
@@ -130,7 +149,7 @@ const Navbar = () => {
                     onClick={() => setLoginOpen(false)}
                 >
                     <div
-                        className="bg-white relative w-full max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl mx-auto shadow-lg overflow-y-auto rounded-2xl max-h-[90vh]"
+                        className="bg-white relative w-full max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-6xl mx-auto shadow-lg overflow-y-auto rounded-2xl max-h-[90vh]"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <LoginPage />

@@ -13,7 +13,7 @@ const Heaters = () => {
             <div className="container mx-auto px-6">
 
                 {/* TITLE */}
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-10 md:mb-20">
+                <div className="flex flex-col md:-mt-4 md:flex-row items-center justify-center gap-4 md:gap-8 mb-10 md:mb-10">
                     <span className="w-16 md:w-36 h-px bg-black" />
 
                     <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-rethink font-semibold tracking-wider text-center">

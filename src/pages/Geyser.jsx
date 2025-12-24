@@ -13,11 +13,11 @@ const products = [
 const Geyser = () => {
     const navigate = useNavigate();
     return (
-        <section className="w-full bg-white py-10 md:py-20">
+        <section className="w-full bg-white py-10 md:py-10">
             <div className="container mx-auto px-4 sm:px-6 lg:px-12">
 
                 <div className="flex flex-col md:flex-row items-center justify-center md:justify-end gap-6 mb-10">
-                    <p className="text-black font-semibold  text-xl md:text-xl -mb-5  text-center md:mr-[40%]">
+                    <p className="text-black font-semibold font-rethink text-xl md:text-xl -mb-5   text-center md:mr-[40%]">
                         Find the accessories you’re looking for.
                     </p>
                 </div>
@@ -33,12 +33,12 @@ const Geyser = () => {
                         <input
                             type="text"
                             placeholder="Search By Product Name"
-                            className="pl-12 pr-4 py-4 border w-full text-sm focus:outline-none rounded-md"
+                            className="pl-12 pr-4 py-4 -mt-2 border border-[#0000003B] w-full text-sm focus:outline-none"
                         />
                     </div>
 
                     <div className="w-full md:w-auto flex justify-center md:justify-end">
-                        <button className="flex items-center justify-center gap-2 px-6 py-3 bg-[#D9D9D933] text-sm w-full md:w-auto rounded-md whitespace-nowrap">
+                        <button className="flex items-center justify-center gap-2 px-6 py-3 bg-[#D9D9D933] text-sm w-full md:w-auto  whitespace-nowrap">
                             All Products
                             <Icon icon="basil:filter-outline" className="text-lg" />
                         </button>
@@ -47,7 +47,7 @@ const Geyser = () => {
 
                 {/* TITLE */}
 
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-20 mb-20">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-20 mb-14">
                     <span className="w-24 md:w-36 h-px bg-black" />
 
                     <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-rethink font-semibold tracking-wider text-center">

@@ -1,4 +1,6 @@
 import React from "react";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const products = [
     {
@@ -34,20 +36,35 @@ const ShopByCategory = () => {
                     {products.map((product, index) => (
                         <div
                             key={index}
-                            className="bg-gray-100 p-2 flex flex-col items-center justify-center rounded-lg  transition"
+                            className="relative bg-[#f2f2f2] rounded-xl p-6 flex flex-col justify-between min-h-[320px] sm:min-h-[360px] md:min-h-[400px]"
                         >
-                            <h3 className="text-base sm:text-lg font-semibold">
+                            {/* Title */}
+                            <h3 className="text-sm sm:text-base font-semibold text-gray-800">
                                 {product.title}
                             </h3>
 
-                            <img
-                                src={product.img}
-                                alt={product.title}
-                                className="h-40 sm:h-52 md:h-60 object-contain w-auto"
-                            />
+                            {/* Image */}
+                            <div className="flex justify-center  items-center mt-4 flex-1">
+                                <img
+                                    src={product.img}
+                                    alt={product.title}
+                                    className="
+            h-full w-auto
+            max-h-[240px] sm:max-h-[280px] md:max-h-[420px]
+            object-contain
+          "
+                                />
+                            </div>
+
+                            {/* Bottom Arrow Button */}
+                            <Link to="/details" className="absolute bottom-4 right-4 w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-black flex items-center justify-center transition">
+                                <MdKeyboardArrowRight />
+                            </Link>
                         </div>
                     ))}
                 </div>
+
+
             </section>
 
             {/* ABOUT US */}
@@ -72,44 +89,56 @@ const ShopByCategory = () => {
             </section>
 
             {/* LOWER SECTION */}
-            <div className="max-w-10xl mx-auto mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 items-start px-4 sm:px-6 lg:px-0">
+            <div className="max-w-10xl mx-auto mt-12 md:mt-20 px-4 sm:px-6 lg:px-0">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
 
-                {/* Left Column */}
-                <div className="flex flex-col items-start space-y-6">
-                    <p className="text-gray-600 font-medium leading-relaxed text-base sm:text-lg md:text-xl">
-                        Lakshmipur Enterprise creates reliable heating and hot water solutions
-                        designed for everyday Indian living. With a focus on safety, durability,
-                        and efficiency, our products are built to deliver comfort that lasts
-                        season after season.
-                    </p>
-                    <button className="border border-gray-400 rounded-full px-8 py-2 text-sm sm:text-base 
-                           font-semibold tracking-wide uppercase hover:bg-black hover:text-white transition-colors duration-300">
-                        Know Our Story ›
-                    </button>
+                    {/* LEFT COLUMN */}
+                    <div className="flex flex-col items-start space-y-6 text-center md:text-left">
+                        <p className="text-gray-600 font-medium leading-relaxed text-base sm:text-lg md:text-xl">
+                            Lakshmipur Enterprise creates reliable heating and hot water solutions
+                            designed for everyday Indian living. With a focus on safety, durability,
+                            and efficiency, our products are built to deliver comfort that lasts
+                            season after season.
+                        </p>
+
+                        <button
+                            className="mx-auto md:mx-0 border border-gray-400 rounded-full px-8 py-2 
+        text-sm sm:text-base font-semibold tracking-wide uppercase 
+        hover:bg-black hover:text-white transition-colors duration-300"
+                        >
+                            Know Our Story ›
+                        </button>
+                    </div>
+
+                    {/* MIDDLE COLUMN (IMAGE) */}
+                    <div className="relative flex justify-center md:min-h-[300px]">
+                        <img
+                            src="/Group 549.png"
+                            alt="Water Heater"
+                            className="
+          relative md:absolute
+          md:top-0 md:left-1/2 md:-translate-x-1/2
+          w-44 sm:w-56 md:w-64 lg:w-72
+          object-contain
+        "
+                        />
+                    </div>
+
+                    {/* RIGHT COLUMN */}
+                    <div className="flex flex-col space-y-4 text-center md:text-left md:mt-48">
+                        <h3 className="text-gray-600 font-bold text-xs sm:text-sm md:text-base uppercase tracking-tight">
+                            ISO 9001:2015 Certified Company
+                        </h3>
+
+                        <p className="text-black font-medium leading-relaxed text-sm sm:text-base md:text-lg">
+                            We design safe, efficient heating and water storage systems. Indian homes,
+                            shops, and more trust us.
+                        </p>
+                    </div>
+
                 </div>
-
-                {/* Middle Column */}
-                <div className="flex justify-center relative">
-
-                    <img
-                        src="/Group 549.png"
-                        alt="Water Heater"
-                        className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 md:-translate-y-4 w-40 sm:w-52 md:w-60 lg:w-72 object-contain "
-                    />
-                </div>
-
-                {/* Right Column */}
-                <div className="flex flex-col space-y-4 mt-10 md:mt-48">
-                    <h3 className="text-gray-600 font-bold text-xs sm:text-sm md:text-base uppercase tracking-tighter">
-                        ISO 9001:2015 Certified Company
-                    </h3>
-                    <p className="text-black font-medium leading-relaxed text-sm sm:text-base md:text-lg">
-                        We design safe, efficient heating and water storage systems. Indian homes,
-                        shoppes, and more call us.
-                    </p>
-                </div>
-
             </div>
+
 
         </div>
     );
