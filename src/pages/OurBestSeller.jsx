@@ -1,5 +1,7 @@
 import React from 'react';
 import { ArrowRight, ShoppingCart, CheckCircle, CreditCard, Truck } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { IoIosArrowForward } from 'react-icons/io';
 
 const OurBestSeller = () => {
     const steps = [
@@ -10,10 +12,10 @@ const OurBestSeller = () => {
     ];
 
     return (
-        <div className="bg-white font-sans text-black overflow-x-hidden">
+        <div className="bg-white  font-rethink text-black overflow-x-hidden">
 
             {/* SECTION 1: OUR BEST SELLERS */}
-            <section className="py-8 sm:py-12 md:py-14 bg-[#D9D9D933] px-4 sm:px-6 md:px-6 max-w-10xl mx-auto">
+            <section className=" bg-[#D9D9D933] px-4 sm:px-6 md:px-8 py-8 max-w-10xl mx-auto">
                 <h2 className="text-center text-2xl sm:text-3xl md:text-6xl font-bold uppercase mb-10 md:mb-16 tracking-tighter">
                     Our <span className="underline decoration-4 underline-offset-8">Best</span> Sellers
                 </h2>
@@ -28,7 +30,7 @@ const OurBestSeller = () => {
                             Room Heater
                         </button>
 
-                        <div className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden">
+                        <Link to="/details" className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden">
                             <img
                                 src="../../public/0ur.png"
                                 alt="Heater"
@@ -41,15 +43,17 @@ const OurBestSeller = () => {
                                 <p className="text-[9px] sm:text-[10px] font-bold uppercase mb-2">
                                     Get 30% Off on Lakshmisun Room Heater
                                 </p>
-                                <p className="text-gray-500 text-[9px] sm:text-[10px] leading-tight mb-3 sm:mb-4 italic">
+                                <p className="text-[#666666] text-[9px] sm:text-[15px] font-medium lg:text-[15px] leading-tight mb-3 sm:mb-4  italic">
                                     Warmth you can rely on, safety you can trust.
                                 </p>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-2xl sm:text-3xl font-black">₹15,000</span>
-                                    <ArrowRight className="w-5 h-5 p-1 border border-black rounded-full" />
+                                    <span className="text-2xl sm:text-3xl lg:text-5xl font-medium">₹15,000</span>
+                                    <div className='p-2 mt-16'>
+                                        <IoIosArrowForward className="w-5 h-5 p-1 border border-black rounded-full" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
 
                     {/* Center Info Card */}
@@ -58,7 +62,7 @@ const OurBestSeller = () => {
                         <h3 className="text-xl sm:text-2xl font-bold uppercase leading-tight tracking-tighter">
                             Designed for <br /> Everyday Comfort
                         </h3>
-                        <p className="text-gray-400 text-[9px] sm:text-[10px] uppercase font-bold tracking-tight px-4">
+                        <p className="text-[#666666] text-[9px] sm:text-[15px]  lg:text-[15px]  uppercase font-medium tracking-tight px-4">
                             Quality Room Heaters and Geysers Built with Safety, Efficiency and Performance in mind.
                         </p>
                         <button className="bg-[#1a1a1a] text-white px-6 sm:px-8 py-2.5 sm:py-3 
@@ -79,7 +83,7 @@ const OurBestSeller = () => {
                         </button>
 
                         {/* IMAGE WRAPPER */}
-                        <div className="relative w-full h-40 sm:h-44 md:h-48 mb-4 flex items-center justify-center">
+                        <Link to="/details" className="relative w-full h-40 sm:h-44 md:h-48 mb-4 flex items-center justify-center">
 
                             <img
                                 src="./1 (3).png"
@@ -92,14 +96,14 @@ const OurBestSeller = () => {
                                 alt="Geyser"
                                 className="w-full h-full object-contain"
                             />
-                        </div>
+                        </Link>
 
                         {/* Content */}
                         <div className="text-center">
                             <h4 className="font-bold uppercase text-xs sm:text-sm mb-1">
                                 Lakshmisun Instant Geyser
                             </h4>
-                            <p className="text-gray-400 text-[9px] sm:text-[10px] font-bold mb-4">
+                            <p className="text-[#666666] text-[9px] sm:text-[15px]  lg:text-[15px] font-medium mb-4">
                                 Instant hot water, whenever you need it.
                             </p>
                             <div className="flex justify-center items-center gap-4">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, PlayCircle, Star } from 'lucide-react';
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const TestimonialCard = ({ name, image, text }) => (
   <div className="relative mt-12 w-full px-4">
@@ -60,23 +61,25 @@ export default function SimpleReviews() {
   };
 
   return (
-    <section className="bg-white py-8 px-4 sm:px-6 md:px-[64px] font-sans">
+    <section className="bg-white py-8 px-4 sm:px-6 md:px-[64px] font-rethink">
       <div className="max-w-10xl mx-auto relative">
-        
+
         {/* Header Section */}
         <div className="flex items-center gap-2 mb-6">
-          <PlayCircle size={18} className="text-gray-800" />
+          <button className="rounded-full border border-black ">
+            <MdKeyboardArrowRight className="w-4 h-4 text-gray-400" />
+          </button>
           <span className="text-[10px] font-black tracking-[0.2em] uppercase text-gray-800">Testimonials</span>
         </div>
 
-        <h2 className="text-4xl md:text-7xl font-semibold text-gray-900 mb-12 leading-tight">
+        <h2 className="text-4xl md:text-6xl font-semibold text-gray-900 mb-12 leading-tight">
           WHAT OUR <br /> CUSTOMERS SAY ?
         </h2>
 
         {/* Carousel Container */}
         <div className="relative overflow-hidden">
           {/* Slider Wrapper */}
-          <div 
+          <div
             className="flex transition-transform duration-500 p-10 ease-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
@@ -88,7 +91,7 @@ export default function SimpleReviews() {
           </div>
 
           {/* Controls - Left Button */}
-          <button 
+          <button
             onClick={prevSlide}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white border border-black rounded-full p-2 hover:bg-black hover:text-white transition-all shadow-md"
           >
@@ -96,7 +99,7 @@ export default function SimpleReviews() {
           </button>
 
           {/* Controls - Right Button */}
-          <button 
+          <button
             onClick={nextSlide}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white border border-black rounded-full p-2 hover:bg-black hover:text-white transition-all shadow-md"
           >
@@ -107,8 +110,8 @@ export default function SimpleReviews() {
         {/* Pagination Dots */}
         <div className="flex justify-center gap-2 mt-8">
           {testimonials.map((_, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className={`h-2 w-2 rounded-full transition-all ${currentIndex === i ? 'bg-black w-6' : 'bg-gray-300'}`}
             />
           ))}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import heaterImg from "../../public/1 (4).png";
+import { useNavigate } from "react-router-dom";
 
 const products = [
     { id: 1, name: "Lakshmisun Instant Geyser", price: "₹25,000" },
@@ -8,6 +9,7 @@ const products = [
 ];
 
 const Heaters = () => {
+    const navigate = useNavigate();
     return (
         <section className="w-full bg-white py-10 md:py-20">
             <div className="container mx-auto px-6">
@@ -49,6 +51,7 @@ const Heaters = () => {
 
                             {/* ARROW BUTTON */}
                             <button
+                                onClick={() => navigate("/details")}
                                 className="absolute bottom-4 right-4 w-9 h-9 border border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition"
                             >
                                 <Icon icon="weui:arrow-outlined" className="text-lg" />

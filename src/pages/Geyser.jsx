@@ -17,17 +17,17 @@ const Geyser = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-12">
 
                 <div className="flex flex-col md:flex-row items-center justify-center md:justify-end gap-6 mb-10">
-                    <p className="text-black font-semibold font-rethink text-xl md:text-xl -mb-5   text-center md:mr-[40%]">
+                    <p className="text-black font-semibold font-rethink text-xl md:text-lg -mb-5   text-center md:mr-[40%]">
                         Find the accessories you’re looking for.
                     </p>
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between items-center md:ml-24 mb-14 gap-4">
 
-                    <div className="w-full md:ml-[26%]  md:w-[35%] relative">
+                    <div className="w-full md:mx-[27%]  md:w-[35%] relative">
                         {/* Search Icon – LEFT */}
                         <span className="absolute left-4 top-1/2  -translate-y-1/2 text-gray-400">
-                            <Icon icon="iconoir:search" className="text-xl mb-2" />
+                            <Icon icon="iconoir:search" className="text-xl mb-" />
                         </span>
 
                         <input

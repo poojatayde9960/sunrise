@@ -1,14 +1,13 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
         <footer className="bg-[#F7F7F7] font-rethink px-4 py-8">
 
             {/* Top Section */}
-            <div className="bg-[#1A1919] text-white px-6 py-10 
-                            flex flex-col md:flex-row md:justify-between md:items-center">
-
+            <div className="bg-[#1A1919] text-white px-6 py-10 flex flex-col md:flex-row md:justify-between md:items-center">
                 {/* Left */}
                 <div className="mb-8 md:mb-0 md:ml-7 text-center md:text-left">
                     <h2 className="text-3xl md:text-4xl font-semibold mb-5">
@@ -16,9 +15,11 @@ const Footer = () => {
                         MORE COMFORTABLE <br />
                         WINTER?
                     </h2>
-                    <button className="bg-white text-gray-900 px-10 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
-                        Shop Now
-                    </button>
+                    <Link to="/producs">
+                        <button className="bg-white text-gray-900 px-10 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+                            Shop Now
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Right */}
@@ -39,10 +40,10 @@ const Footer = () => {
                 <div className="text-center md:text-left">
                     <h3 className="font-bold text-xl mb-3">Information</h3>
                     <ul className="space-y-1 text-black font-medium">
-                        <li className="hover:underline cursor-pointer">Home</li>
-                        <li className="hover:underline cursor-pointer">About</li>
-                        <li className="hover:underline cursor-pointer">Products</li>
-                        <li className="hover:underline cursor-pointer">How to Order?</li>
+                        <li><Link to="/" className="hover:underline">Home</Link></li>
+                        <li><Link to="/about" className="hover:underline">About</Link></li>
+                        <li><Link to="/producs" className="hover:underline">Products</Link></li>
+                        <li><Link to="/contact" className="hover:underline">How to Order?</Link></li>
                     </ul>
                 </div>
 
@@ -50,13 +51,31 @@ const Footer = () => {
                 <div className="text-center md:text-left md:mr-[35%]">
                     <h3 className="font-bold text-xl mb-3">Contact</h3>
                     <ul className="space-y-1 text-black font-medium">
-                        <li>+91 6565 655 555</li>
-                        <li>laxmisun@gmail.com</li>
+                        <li>
+                            <a
+                                href="tel:+916565655555"
+                                className="hover:underline cursor-pointer"
+                            >
+                                +91 6565 655 555
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="mailto:laxmisun@gmail.com"
+                                className="hover:underline cursor-pointer"
+                            >
+                                laximsun@gmail.com
+                            </a>
+                        </li>
+
                         <li>
                             Golden City Center,<br />
-                            Chhatrapati Sambhajinagar,<br /> 431001
+                            Chhatrapati Sambhajinagar,<br />
+                            431001
                         </li>
                     </ul>
+
                 </div>
 
                 {/* Social Media */}
@@ -65,25 +84,23 @@ const Footer = () => {
                         SOCIAL MEDIA LINKS
                     </h3>
                     <div className="flex justify-center gap-4">
-                        <a className="bg-[#1A1919] flex items-center justify-center text-white h-12 w-12 hover:bg-gray-600 transition">
+                        <a className="bg-[#1A1919] flex items-center justify-center text-white h-12 w-12 hover:bg-gray-600 transition" href="https://wa.me/919999999999" target="_blank">
                             <Icon icon="ri:whatsapp-fill" width={26} />
                         </a>
-                        <a className="bg-[#1A1919] flex items-center justify-center text-white h-12 w-12 hover:bg-gray-600 transition">
+                        <a className="bg-[#1A1919] flex items-center justify-center text-white h-12 w-12 hover:bg-gray-600 transition" href="https://instagram.com" target="_blank">
                             <Icon icon="ri:instagram-fill" width={26} />
                         </a>
-                        <a className="bg-[#1A1919] flex items-center justify-center text-white h-12 w-12 hover:bg-gray-600 transition">
+                        <a className="bg-[#1A1919] flex items-center justify-center text-white h-12 w-12 hover:bg-gray-600 transition" href="https://facebook.com" target="_blank">
                             <Icon icon="ic:baseline-facebook" width={26} />
                         </a>
                     </div>
                 </div>
+
             </div>
 
             {/* Bottom Section */}
-            <div className="border-t border-[#1A1919] px-6 py-4
-                            flex flex-col md:flex-row md:justify-between md:items-center
-                            text-center gap-4">
-
-                <p className="text-[#1A1919] text-base font-semibold">
+            <div className="border-t border-[#1A1919] px-6 py-4 flex flex-col md:flex-row md:justify-between md:items-center text-center gap-4">
+                <p className="text-[#1A1919] text-base lg:ml-12 font-semibold">
                     ©2025 All Rights Reserved
                 </p>
 
@@ -96,6 +113,7 @@ const Footer = () => {
                     />
                 </div>
             </div>
+
         </footer>
     );
 };

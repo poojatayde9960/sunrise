@@ -1,3 +1,4 @@
+import { PlayCircle } from "lucide-react";
 import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -19,7 +20,7 @@ const products = [
 
 const ShopByCategory = () => {
     return (
-        <div className="w-full min-h-screen bg-white px-4 sm:px-6 md:px-16 py-8">
+        <div className="w-full min-h-screen bg-white font-rethink px-4 sm:px-6 md:px-16 py-8">
 
             {/* SHOP BY CATEGORY */}
             <section className="text-center mb-16">
@@ -27,7 +28,7 @@ const ShopByCategory = () => {
                     SHOP BY CATEGORY
                 </h2>
 
-                <p className="text-gray-500 text-sm font-medium sm:text-base max-w-2xl mx-auto">
+                <p className="text-[#666666] text-sm font-medium sm:text-base max-w-2xl mx-auto">
                     Explore our range of reliable heating and hot water solutions designed
                     for every home.
                 </p>
@@ -36,7 +37,7 @@ const ShopByCategory = () => {
                     {products.map((product, index) => (
                         <div
                             key={index}
-                            className="relative bg-[#f2f2f2] rounded-xl p-6 flex flex-col justify-between min-h-[320px] sm:min-h-[360px] md:min-h-[400px]"
+                            className="relative bg-[#f2f2f2] p-2 flex flex-col justify-between min-h-[320px] sm:min-h-[360px] md:min-h-[400px]"
                         >
                             {/* Title */}
                             <h3 className="text-sm sm:text-base font-semibold text-gray-800">
@@ -44,7 +45,7 @@ const ShopByCategory = () => {
                             </h3>
 
                             {/* Image */}
-                            <div className="flex justify-center  items-center mt-4 flex-1">
+                            <div className="flex justify-center   items-center  flex-1">
                                 <img
                                     src={product.img}
                                     alt={product.title}
@@ -66,7 +67,14 @@ const ShopByCategory = () => {
 
 
             </section>
-
+            <div className="flex items-center gap-2">
+                <button className="rounded-full border border-black ">
+                    <MdKeyboardArrowRight className="w-4 h-4 text-gray-400" />
+                </button>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] border-b-2 border-black pb-0.5">
+                    How to Order
+                </span>
+            </div>
             {/* ABOUT US */}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-10xl mx-auto px-4 sm:px-6 lg:px-0">
 
@@ -77,7 +85,7 @@ const ShopByCategory = () => {
                 </div>
 
                 <div className="flex justify-center md:justify-end">
-                    <div className="relative w-40 sm:w-44 md:w-52 lg:w-60 h-40 sm:h-44 md:h-52 lg:h-64 rounded-sm overflow-visible">
+                    <div className="relative w-40 sm:w-44 md:w-52 lg:w-72 h-40 sm:h-44 md:h-52 lg:h-64 rounded-sm overflow-visible">
                         <img
                             src="/Group 550.png"
                             alt="Smart Geyser"
@@ -89,12 +97,12 @@ const ShopByCategory = () => {
             </section>
 
             {/* LOWER SECTION */}
-            <div className="max-w-10xl mx-auto mt-12 md:mt-20 px-4 sm:px-6 lg:px-0">
+            <div className="max-w-10xl mx-auto mt-12 md:mt-5 px-4 sm:px-6 lg:px-0">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
 
                     {/* LEFT COLUMN */}
                     <div className="flex flex-col items-start space-y-6 text-center md:text-left">
-                        <p className="text-gray-600 font-medium leading-relaxed text-base sm:text-lg md:text-xl">
+                        <p className="text-gray-600 font-medium leading-relaxed text-base sm:text-base md:text-md">
                             Lakshmipur Enterprise creates reliable heating and hot water solutions
                             designed for everyday Indian living. With a focus on safety, durability,
                             and efficiency, our products are built to deliver comfort that lasts
@@ -111,18 +119,19 @@ const ShopByCategory = () => {
                     </div>
 
                     {/* MIDDLE COLUMN (IMAGE) */}
-                    <div className="relative flex justify-center md:min-h-[300px]">
+                    <div className="relative flex justify-center items-center min-h-[300px] sm:min-h-[350px] md:min-h-[400px] lg:-translate-y-16 lg:min-h-[100px]">
                         <img
                             src="/Group 549.png"
                             alt="Water Heater"
                             className="
-          relative md:absolute
-          md:top-0 md:left-1/2 md:-translate-x-1/2
-          w-44 sm:w-56 md:w-64 lg:w-72
-          object-contain
-        "
+      w-40 sm:w-52 md:w-64 lg:w-96 xl:w-[500px]   
+      h-48 sm:h-60 md:h-80 lg:h-96 xl:h-[500px]  
+      object-contain
+    "
                         />
                     </div>
+
+
 
                     {/* RIGHT COLUMN */}
                     <div className="flex flex-col space-y-4 text-center md:text-left md:mt-48">
@@ -130,7 +139,7 @@ const ShopByCategory = () => {
                             ISO 9001:2015 Certified Company
                         </h3>
 
-                        <p className="text-black font-medium leading-relaxed text-sm sm:text-base md:text-lg">
+                        <p className="text-gray-600 font-medium leading-relaxed text-sm sm:text-base md:text-md">
                             We design safe, efficient heating and water storage systems. Indian homes,
                             shops, and more trust us.
                         </p>

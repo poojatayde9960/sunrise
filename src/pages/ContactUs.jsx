@@ -1,16 +1,16 @@
 import React from "react";
 import contact from "../../public/contact.png";
 
-const ContactUs = () => {
+const ContactUs = ({ onClose }) => {
     return (
-        <div className="flex flex-col md:flex-row items-center justify-center min-h-[50%]  mt-20 bg-white">
+        <div className="flex flex-col md:flex-row items-center justify-center min-h-[50%]   mt-20 bg-white">
 
             {/* LEFT IMAGE (Desktop & Tablet Only) */}
             <div className="hidden md:flex w-full md:w-1/2 mr-10 justify-center">
                 <img
                     src={contact}
                     alt="Heater"
-                    className="w-full h-[490px] mb-[16%] object-cover "
+                    className="w-full h-[400px] mb-[16%] object-cover overflow-hidden "
                 />
             </div>
 
