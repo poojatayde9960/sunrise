@@ -3,7 +3,7 @@ import React from "react";
 const WhyChooseSunrise = () => {
     return (
         <section className="w-full bg-white mt-3">
-            <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
+            <div className="w-full px-6 lg:px-12">
 
                 {/* TOP BOXES */}
                 <div className="

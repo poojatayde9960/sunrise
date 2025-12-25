@@ -9,7 +9,7 @@ const HeroSection = () => {
     return (
         <>
             <section className="w-full bg-[#D9D9D933] py-10 sm:py-14 md:py-20 lg:py-24">
-                <div className="max-w-7xl mx-auto px-4 mt-20 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center">
+                <div className="w-full px-6 lg:px-12 mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center">
 
                     {/* LEFT CONTENT */}
                     <div className="text-center lg:text-left">
