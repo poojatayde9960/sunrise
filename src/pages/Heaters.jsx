@@ -12,7 +12,7 @@ const Heaters = () => {
     const navigate = useNavigate();
     return (
         <section className="w-full bg-white py-10 md:py-20">
-            <div className="container mx-auto px-6">
+            <div className="w-full px-6 lg:px-12">
 
                 {/* TITLE */}
                 <div className="flex flex-col md:-mt-4 md:flex-row items-center justify-center gap-4 md:gap-8 mb-10 md:mb-10">

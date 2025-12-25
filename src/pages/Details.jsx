@@ -24,19 +24,19 @@ const Details = () => {
 
             {/* MAIN PRODUCT SECTION */}
             <div
-                className="flex flex-col lg:flex-row items-start  gap-10 lg:gap-16 px-4 sm:px-10 lg:px-[8%] py-12 bg-no-repeat bg-cover"
+                className="flex flex-col lg:flex-row items-start  gap-10 lg:gap-16 px-6 lg:px-12 py-12 bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url(${bg1})` }}
             >
 
                 {/* LEFT IMAGE + THUMBNAILS */}
-                <div className="flex flex-col lg:flex-row mt-8 lg:mt-[10%] items-start gap-6 lg:gap-8 w-full lg:w-[60%]">
+                <div className="flex flex-col lg:flex-row mt-8 lg:mt-[5%] items-start gap-6 lg:gap-8 w-full lg:w-[55%]">
 
                     {/* Main Image */}
-                    <div className="w-full lg:w-[520px] flex justify-center">
+                    <div className="w-full lg:w-auto">
                         <img
                             src={group6}
                             alt="Smart Water Geyser"
-                            className="w-full max-w-[480px] lg:-ml-8 h-auto object-contain scale-105 lg:scale-100 translate-y-2 lg:translate-y-12"
+                            className="w-full max-w-[480px] h-auto object-contain scale-105 lg:scale-100 translate-y-2 lg:translate-y-12"
                         />
                     </div>
 
@@ -106,7 +106,7 @@ const Details = () => {
             </div>
 
             {/* DESCRIPTION */}
-            <div className="flex flex-col lg:flex-row gap-6 mb-16 lg:mt-20  px-4 lg:px-[20%]">
+            <div className="flex flex-col lg:flex-row gap-6 mb-16 lg:mt-20  px-6 lg:px-12">
                 <div className="flex-1 border border-black p-6 ">
                     <h3 className="font-semibold text-3xl mb-2 lg:my-6">DESCRIPTION</h3>
                     <p className="text-sm sm:text-base ">
@@ -126,7 +126,7 @@ const Details = () => {
             </div>
 
             {/* OTHER PRODUCTS */}
-            <div className="mt-12 px-4 sm:px-10 lg:px-[8%]">
+            <div className="mt-12 px-6 lg:px-12">
                 <div className="flex items-center gap-2 mb-6">
                     <button className="w-7 h-7 border border-black rounded-full flex items-center justify-center">
                         <Icon icon="weui:arrow-outlined" className="rotate-180 text-xl" />

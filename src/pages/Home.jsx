@@ -88,7 +88,7 @@ const Home = () => {
             </h1>
 
             {/* MAIN CONTENT */}
-            <div className="relative z-10 max-w-7xl lg:mt-32 mx-auto px-4 h-full hidden md:block">
+            <div className="relative z-10 w-full lg:mt-32 px-6 lg:px-12 h-full hidden md:block">
                 <div className="grid grid-cols-1 md:grid-cols-3 items-center h-full gap-6 sm:gap-8 md:gap-10">
 
                     {/* LEFT CONTENT */}
