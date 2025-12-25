@@ -27,7 +27,8 @@ const Navbar = () => {
 
         <nav className=" fixed  top-0 left-0 w-full z-50  px-4 py-4">
             <div className="absolute inset-0 bg-transparent backdrop-blur-md -z-10" />
-            <div className="max-w-7xl mx-auto flex items-center justify-between">
+            {/* <div className="max-w-7xl  mx-auto flex items-center justify-between"> */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-14 flex items-center justify-between">
 
                 {/* Logo */}
                 <div className="flex items-center">
@@ -135,10 +136,6 @@ const Navbar = () => {
                     </div>
                 </div>
             )}
-
-
-
-            {/* Contact Modal */}
             {/* Contact Modal */}
             {contactOpen && (
                 <div
@@ -219,9 +216,6 @@ const Navbar = () => {
                     </div>
                 </div>
             )}
-
-
-
             {/* Login Modal */}
             {loginOpen && (
                 <div
