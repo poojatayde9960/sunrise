@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import bg from "../../public/backimg.png"
+import mobileBg from "../../public/mobilebg.jpeg"
 import geyserImg from "../../public/1 (3).png"
 import heaterImg from "../../public/1 (4).png"
 
@@ -50,12 +51,20 @@ const Home = () => {
     return (
         <section className="relative w-full min-h-[130svh] pb-40 overflow-hidden">
 
-            {/* BACKGROUND */}
+            {/* MOBILE BACKGROUND */}
+            <img
+                src={mobileBg}
+                className="absolute inset-0 w-full h-full object-cover md:hidden"
+                alt="mobile bg"
+            />
+
+            {/* DESKTOP BACKGROUND */}
             <img
                 src={bg}
-                className="absolute inset-0 w-full h-full object-cover"
-                alt="bg"
+                className="absolute inset-0 w-full h-full object-cover hidden md:block"
+                alt="desktop bg"
             />
+
 
             {/* DOTS */}
             <div className="absolute top-3 left-1/2 mt-20 -translate-x-1/2 z-20 flex gap-2">
@@ -79,11 +88,11 @@ const Home = () => {
             </h1>
 
             {/* MAIN CONTENT */}
-            <div className="relative z-10 w-full lg:mt-44 px-6 lg:px-12 h-full hidden md:block">
+            <div className="relative z-10 max-w-7xl lg:mt-32 mx-auto px-4 h-full hidden md:block">
                 <div className="grid grid-cols-1 md:grid-cols-3 items-center h-full gap-6 sm:gap-8 md:gap-10">
 
                     {/* LEFT CONTENT */}
-                    <div className="order-2 md:order-1 text-center md:text-left">
+                    <div className="order-2 md:order-1  text-center md:text-left">
                         <div
                             key={`left-${current}`}
                             className={`transition-all duration-700 ${slideAnim}`}
@@ -92,7 +101,7 @@ const Home = () => {
                                 animation: phase === "enter" ? "slideFromLeft 0.7s ease-out" : "none"
                             }}
                         >
-                            <h4 className="font-semibold mb-4 text-sm sm:text-base md:text-lg lg:text-xl">
+                            <h4 className="font-semibold mb-4 lg:mt-20 text-sm sm:text-base md:text-lg lg:text-2xl">
                                 {slide.heading}
                             </h4>
 
@@ -100,8 +109,8 @@ const Home = () => {
                                 Shop Now
                             </button>
 
-                            <div className="flex items-center gap-2 sm:gap-3 justify-center md:justify-start">
-                                <span className="bg-white px-3 sm:px-4 py-1 border-2 border-amber-400 rounded-full text-[10px] sm:text-xs">
+                            <div className="flex items-center lg:mt-10 gap-2 sm:gap-3 justify-center md:justify-start">
+                                <span className="bg-white px-3 sm:px-4 py-2 border-2 border-amber-400 rounded-full text-[10px] sm:text-xs lg:text-xl">
                                     {slide.leftTag}
                                 </span>
                                 <div className="w-10 sm:w-16 h-[2px] bg-amber-400" />
@@ -110,27 +119,28 @@ const Home = () => {
                     </div>
 
                     {/* CENTER IMAGE */}
-                    <div className="order-1 md:order-2 relative flex justify-center items-center h-[420px] sm:h-[520px] md:h-[620px] lg:h-[820px] xl:h-[760px]">
+                    <div className="order-1 md:order-2 relative flex justify-center items-center h-[420px] sm:h-[520px] md:h-[620px] lg:h-[820px] xl:h-[760px] overflow-hidden">
                         <img
                             key={`img-${current}`}
                             src={slide.image}
                             alt="product"
                             className={`
-                                absolute
-                                transition-all duration-700 ease-in-out
-                                ${slideAnim}
-                                object-contain
-                                ${current === 1
-                                    ? 'w-[220px] sm:w-[300px] md:w-[420px] lg:w-[760px] xl:w-[640px] 2xl:w-[1100px]'
-                                    : 'w-[180px] sm:w-[240px] md:w-[320px] lg:w-[720px] xl:w-[480px] 2xl:w-[620px]'
+      absolute
+      transition-all duration-700 ease-in-out
+      ${slideAnim}
+      object-contain
+      ${current === 1
+                                    ? 'w-[220px] sm:w-[300px] md:w-[420px] lg:w-[760px] xl:w-[1140px] lg:h-[1000px] xl:h-[1200px]  2xl:w-[1100px]'
+                                    : 'w-[180px] sm:w-[240px] md:w-[320px] lg:w-[820px] xl:w-[480px] 2xl:w-[620px]'
                                 }
-                            `}
+    `}
                             style={{
                                 transform: phase === "enter" ? "translateX(0)" : "translateX(100%)",
                                 animation: phase === "enter" ? "slideFromLeft 0.7s ease-out" : "none"
                             }}
                         />
                     </div>
+
 
                     {/* RIGHT CONTENT */}
                     <div className="order-3 text-center md:text-right">
@@ -142,14 +152,14 @@ const Home = () => {
                                 animation: phase === "enter" ? "slideFromLeft 0.7s ease-out" : "none"
                             }}
                         >
-                            <div className="flex items-center gap-2 sm:gap-3 justify-center md:justify-end mb-4 sm:mb-6">
+                            <div className="flex items-center gap-2 lg:mt-36 sm:gap-3 justify-center md:justify-end mb-4 sm:mb-6">
                                 <div className="w-10 sm:w-16 h-[2px] bg-amber-400" />
-                                <span className="bg-white px-3 sm:px-4 py-1 border-2 border-amber-400 rounded-full text-[10px] sm:text-xs">
+                                <span className="bg-white px-3 sm:px-4 py-2 border-2 border-amber-400 rounded-full text-[10px] sm:text-xs lg:text-xl">
                                     {slide.rightTag}
                                 </span>
                             </div>
 
-                            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-700 leading-relaxed">
+                            <p className="text-xs sm:text-sm md:text-base lg:mt-52 lg:text-2xl font-semibold text-gray-700 leading-relaxed">
                                 {slide.desc}
                             </p>
                         </div>
@@ -206,6 +216,7 @@ const Home = () => {
 
 
             </div>
+
 
 
             {/* CSS Animation */}

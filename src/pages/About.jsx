@@ -11,7 +11,6 @@ const About = () => {
             <section className="w-full bg-[#D9D9D933] py-10 sm:py-14 md:py-20 lg:py-24">
                 <div className="w-full px-6 lg:px-12 mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 md:gap-10 items-center">
 
-                    {/* LEFT CONTENT */}
                     <div className="text-center  lg:text-left">
                         <h1 className="text-3xl  sm:text-4xl md:text-5xl lg:text-7xl font-semibold text-black leading-tight">
                             DESIGNED <br />
@@ -29,10 +28,10 @@ const About = () => {
                     </div>
 
                     {/* RIGHT IMAGE GRID */}
-                    <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                    <div className="grid grid-cols-2  gap-4 sm:gap-6">
 
                         {/* Top Left */}
-                        <div className="rounded-xl sm:rounded-2xl overflow-hidden h-28 sm:h-36 md:h-44 lg:h-48 mt-4 sm:mt-0">
+                        <div className="rounded-xl sm:rounded-2xl overflow-hidden h-28 sm:h-36 md:h-44 lg:mt-2 lg:h-52 mt-4 sm:mt-0">
                             <img
                                 src={img4}
                                 alt="Interior"
@@ -50,7 +49,7 @@ const About = () => {
                         </div>
 
                         {/* Bottom Left */}
-                        <div className="rounded-xl sm:rounded-2xl overflow-hidden h-28 sm:h-36 md:h-44 lg:h-48 mt-4 sm:mt-0">
+                        <div className="rounded-xl sm:rounded-2xl overflow-hidden h-28 sm:h-36 md:h-44 lg:h-52 mt-4 sm:mt-0">
                             <img
                                 src={img5}
                                 alt="Interior"
