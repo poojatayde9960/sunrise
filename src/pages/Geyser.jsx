@@ -13,7 +13,7 @@ const products = [
 const Geyser = () => {
     const navigate = useNavigate();
     return (
-        <section className="w-full bg-white py-10 md:py-10 md:px-7">
+        <section className="w-full bg-white py-10 md:py-10 md:-px-3">
             <div className="container mx-auto px-4 sm:px-6 lg:px-12">
 
                 <div className="flex flex-col md:flex-row items-center justify-center md:justify-end gap-6 mb-10">

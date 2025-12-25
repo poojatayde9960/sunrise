@@ -2,6 +2,8 @@ import React from 'react';
 import { ArrowRight, ShoppingCart, CheckCircle, CreditCard, Truck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { IoIosArrowForward } from 'react-icons/io';
+import photo from "../../public/contact.png";
+
 
 const OurBestSeller = () => {
     const steps = [
@@ -32,7 +34,7 @@ const OurBestSeller = () => {
 
                         <Link to="/details" className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden">
                             <img
-                                src="../../public/0ur.png"
+                                src={photo}
                                 alt="Heater"
                                 className="w-full h-full object-cover grayscale-[0.2]"
                             />

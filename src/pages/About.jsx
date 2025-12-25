@@ -35,9 +35,10 @@ const About = () => {
                             <img
                                 src={img4}
                                 alt="Interior"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover rounded-xl sm:rounded-2xl"
                             />
                         </div>
+
 
                         {/* Right Tall Image */}
                         <div className="row-span-2 rounded-xl sm:rounded-2xl overflow-hidden mt-4 sm:mt-0">

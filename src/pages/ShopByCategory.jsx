@@ -2,19 +2,21 @@ import { PlayCircle } from "lucide-react";
 import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-
+import img1 from "../../public/1 (3).png";
+import img2 from "../../public/1 (1).png";
+import img3 from "../../public/1 (4).png";
 const products = [
     {
         title: "Room Heaters",
-        img: "../../public/1 (4).png",
+        img: img1,
     },
     {
         title: "Smart Geysers",
-        img: "../../public/1 (2).png",
+        img: img2,
     },
     {
         title: "Storage Geysers",
-        img: "../../public/1 (1).png",
+        img: img3,
     },
 ];
 
