@@ -71,8 +71,8 @@ const ShopByCategory = () => {
                 <button className="rounded-full border border-black ">
                     <MdKeyboardArrowRight className="w-4 h-4 text-gray-400" />
                 </button>
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] border-b-2 border-black pb-0.5">
-                    How to Order
+                <span className="text-[10px] font-bold uppercase border-b-2 border-black pb-0.5">
+                    About Us
                 </span>
             </div>
             {/* ABOUT US */}
@@ -87,7 +87,7 @@ const ShopByCategory = () => {
                 <div className="flex justify-center md:justify-end">
                     <div className="relative w-40 sm:w-44 md:w-52 lg:w-72 h-40 sm:h-44 md:h-52 lg:h-64 rounded-sm overflow-visible">
                         <img
-                            src="/Group 550.png"
+                            src="/Group 549.png"
                             alt="Smart Geyser"
                             className="absolute left-0 sm:left-[-10px] md:left-[-20px] lg:left-[-32px] bottom-0 h-36 sm:h-44 md:h-52 lg:h-64 w-auto object-contain"
                         />
@@ -121,7 +121,7 @@ const ShopByCategory = () => {
                     {/* MIDDLE COLUMN (IMAGE) */}
                     <div className="relative flex justify-center items-center min-h-[300px] sm:min-h-[350px] md:min-h-[400px] lg:-translate-y-16 lg:min-h-[100px]">
                         <img
-                            src="/Group 549.png"
+                            src="/Group 550.jpeg"
                             alt="Water Heater"
                             className="
       w-40 sm:w-52 md:w-64 lg:w-96 xl:w-[500px]   

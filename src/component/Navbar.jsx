@@ -87,7 +87,7 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {open && (
                 <div
-                    className="fixed inset-0 z-40 top-[30%]"
+                    className="fixed inset-0 z-40 top-[0%]"
                     onClick={() => setOpen(false)} // outside click closes menu
                 >
                     <div
@@ -235,10 +235,11 @@ const Navbar = () => {
                     >
                         <button
                             onClick={() => setLoginOpen(false)}
-                            className="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl"
+                            className="hidden md:block absolute top-4 right-4 text-gray-500 hover:text-black text-2xl"
                         >
                             ×
                         </button>
+
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
