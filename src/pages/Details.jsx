@@ -106,7 +106,7 @@ const Details = () => {
             </div>
 
             {/* DESCRIPTION */}
-            <div className="flex flex-col lg:flex-row gap-6 mb-16 lg:mt-20  px-4 lg:px-[9.5%]">
+            <div className="flex flex-col lg:flex-row gap-6 mb-16 lg:mt-20  px-4 lg:px-[20%]">
                 <div className="flex-1 border border-black p-6 ">
                     <h3 className="font-semibold text-3xl mb-2 lg:my-6">DESCRIPTION</h3>
                     <p className="text-sm sm:text-base ">

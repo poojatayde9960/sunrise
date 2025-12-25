@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
 import Layout from './component/Layout'
 import Hero from './pages/Hero'
 import Footer from './pages/Footer'
@@ -15,7 +15,7 @@ import About from './pages/About'
 
 const App = () => {
   return <>
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Layout />}>
@@ -31,7 +31,7 @@ const App = () => {
         <Route path='*' element={<h1>Page Not Found</h1>} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   </>
 }
 
